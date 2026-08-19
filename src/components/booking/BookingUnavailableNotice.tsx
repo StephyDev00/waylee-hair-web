@@ -16,7 +16,7 @@ export function BookingUnavailableNotice({
         <PhoneCall className="mt-0.5 shrink-0 text-wine" size={20} />
         <div>
           <p className="font-medium text-wine">{t("unavailableTitle")}</p>
-          <p className="mt-1 text-sm text-ink/65">
+          <p className="mt-1 text-sm text-ink/75">
             {t("unavailableBody")}{" "}
             <a href="tel:+41782495584" className="text-wine hover:underline">
               078 249 55 84

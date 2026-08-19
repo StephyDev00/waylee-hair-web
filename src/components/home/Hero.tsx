@@ -18,7 +18,7 @@ export function Hero() {
             {t("titleLine1")}
             <span className="block italic font-light text-ivory/90">{t("titleLine2")}</span>
           </h1>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-ivory/70">
+          <p className="mt-6 max-w-md text-base leading-relaxed text-ivory/80">
             {t("subtitle")}
           </p>
           <div className="mt-9 flex flex-wrap gap-4">

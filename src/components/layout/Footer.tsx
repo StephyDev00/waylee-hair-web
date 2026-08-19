@@ -28,7 +28,7 @@ export function Footer() {
             <span className="mt-1 block text-[0.65rem] tracking-[0.35em] uppercase text-ivory/60">
               Hair &amp; Beauty
             </span>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory/70">{t("tagline")}</p>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory/80">{t("tagline")}</p>
           </div>
 
           <div className="text-sm text-ivory/80">

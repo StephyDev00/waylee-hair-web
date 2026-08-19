@@ -24,6 +24,7 @@
 body {
   background: var(--color-ivory);
   color: var(--color-ink);
+  font-weight: 500;
 }
 
 ::selection {

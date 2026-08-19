@@ -37,7 +37,7 @@ export function PortfolioHighlights() {
           />
         </div>
       </div>
-      <p className="mt-6 text-sm text-ink/50">
+      <p className="mt-6 text-sm text-ink/60">
         {t("comingSoon")}{" "}
         <a
           href="https://www.instagram.com/waylee.hair.beauty"

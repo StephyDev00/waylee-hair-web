@@ -34,7 +34,7 @@ export default async function PortfolioPage() {
     <Section className="pt-16 md:pt-20">
       <Eyebrow>{t("eyebrow")}</Eyebrow>
       <h1 className="max-w-2xl font-serif text-4xl font-bold md:text-5xl">{t("title")}</h1>
-      <p className="mt-4 max-w-xl text-ink/65">{t("subtitle")}</p>
+      <p className="mt-4 max-w-xl text-ink/75">{t("subtitle")}</p>
       <p className="mt-2 max-w-xl text-xs text-ink/40">{t("previewNote")}</p>
 
       <div className="mt-12">

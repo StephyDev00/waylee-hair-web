@@ -26,7 +26,7 @@ export function ServicesPreview() {
           >
             <Icon className="text-wine" size={28} strokeWidth={1.5} />
             <h3 className="mt-5 font-serif text-xl font-semibold">{title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink/70">{desc}</p>
+            <p className="mt-2 text-sm leading-relaxed text-ink/80">{desc}</p>
           </div>
         ))}
       </div>

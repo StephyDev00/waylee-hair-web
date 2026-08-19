@@ -53,7 +53,7 @@ export default async function ContactPage() {
         <div className="grid gap-12 md:grid-cols-2">
           <div>
             <MapEmbed />
-            <div className="mt-8 space-y-4 text-sm text-ink/75">
+            <div className="mt-8 space-y-4 text-sm text-ink/85">
               <p className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-wine" />
                 Rue Leschot 2, 1205 Genève

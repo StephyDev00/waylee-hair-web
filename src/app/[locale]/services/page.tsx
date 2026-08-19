@@ -31,7 +31,7 @@ export default async function ServicesPage() {
       <Section className="pb-8 pt-16 md:pt-20">
         <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h1 className="max-w-2xl font-serif text-4xl font-bold md:text-5xl">{t("title")}</h1>
-        <p className="mt-4 max-w-xl text-ink/65">{t("subtitle")}</p>
+        <p className="mt-4 max-w-xl text-ink/75">{t("subtitle")}</p>
       </Section>
 
       <Section className="pt-0">

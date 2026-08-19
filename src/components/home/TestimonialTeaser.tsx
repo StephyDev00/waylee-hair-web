@@ -9,7 +9,7 @@ export function TestimonialTeaser() {
       <p className="font-script text-4xl text-wine-light md:text-5xl">
         &ldquo;{t("quote")}&rdquo;
       </p>
-      <p className="mx-auto mt-6 max-w-lg text-ivory/70">
+      <p className="mx-auto mt-6 max-w-lg text-ivory/80">
         {t("body")}{" "}
         <a
           href="https://www.instagram.com/waylee.hair.beauty"

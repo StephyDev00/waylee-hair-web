@@ -35,7 +35,7 @@ export default async function AboutPage() {
               sizes="(min-width: 768px) 40vw, 100vw"
             />
           </div>
-          <div className="space-y-5 text-ink/75 leading-relaxed">
+          <div className="space-y-5 text-ink/85 leading-relaxed">
             <p>{t("paragraph1")}</p>
             <p>{t("paragraph2")}</p>
             <p className="text-ink/50 text-sm italic">{t("placeholder")}</p>
