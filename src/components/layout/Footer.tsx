@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Music2, MapPin, Phone } from "lucide-react";
 import { LineArtMotif } from "@/components/brand/LineArtMotif";
 import { InstagramIcon } from "@/components/brand/SocialIcons";
@@ -11,7 +12,16 @@ export function Footer() {
       <Container className="relative py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
-            <span className="font-serif text-2xl font-bold tracking-wide">WAYLEE</span>
+            <span className="relative block h-14 w-14 overflow-hidden rounded-full bg-ivory/10">
+              <Image
+                src="/images/logo/waylee-icon.jpg"
+                alt="Waylee Hair & Beauty"
+                fill
+                className="object-cover"
+                sizes="56px"
+              />
+            </span>
+            <span className="mt-3 block font-serif text-2xl font-bold tracking-wide">WAYLEE</span>
             <span className="mt-1 block text-[0.65rem] tracking-[0.35em] uppercase text-ivory/60">
               Hair &amp; Beauty
             </span>
