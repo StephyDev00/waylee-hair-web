@@ -3,17 +3,19 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { contactSchema, type ContactInput } from "@/lib/validation/contactSchema";
+import { useTranslations } from "next-intl";
+import { createContactSchema, type ContactInput } from "@/lib/validation/contactSchema";
 import { Button } from "@/components/ui/Button";
 
 export function ContactForm() {
+  const t = useTranslations("contact.form");
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<ContactInput>({ resolver: zodResolver(contactSchema) });
+  } = useForm<ContactInput>({ resolver: zodResolver(createContactSchema(t)) });
 
   async function onSubmit(data: ContactInput) {
     setStatus("idle");
@@ -34,10 +36,8 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-wine/20 bg-wine/5 p-8 text-center">
-        <p className="font-serif text-xl text-wine">Message sent — merci!</p>
-        <p className="mt-2 text-sm text-ink/60">
-          We&apos;ll get back to you as soon as possible.
-        </p>
+        <p className="font-serif text-xl text-wine">{t("successTitle")}</p>
+        <p className="mt-2 text-sm text-ink/60">{t("successBody")}</p>
       </div>
     );
   }
@@ -56,7 +56,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink/80">
-          Name
+          {t("name")}
         </label>
         <input
           id="name"
@@ -69,7 +69,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink/80">
-            Email
+            {t("email")}
           </label>
           <input
             id="email"
@@ -81,7 +81,7 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-ink/80">
-            Phone (optional)
+            {t("phone")}
           </label>
           <input
             id="phone"
@@ -93,7 +93,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink/80">
-          Message
+          {t("message")}
         </label>
         <textarea
           id="message"
@@ -106,14 +106,10 @@ export function ContactForm() {
         )}
       </div>
 
-      {status === "error" && (
-        <p className="text-sm text-wine-dark">
-          Something went wrong — please try again or call us directly.
-        </p>
-      )}
+      {status === "error" && <p className="text-sm text-wine-dark">{t("error")}</p>}
 
       <Button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Sending…" : "Send message"}
+        {isSubmitting ? t("sending") : t("send")}
       </Button>
     </form>
   );

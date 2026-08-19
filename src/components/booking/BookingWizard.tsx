@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
 import type { Service } from "@/lib/pricing";
 import { ServiceSelect } from "@/components/booking/ServiceSelect";
 import { DateTimeStep } from "@/components/booking/DateTimeStep";
@@ -17,6 +18,7 @@ interface Slot {
 
 export function BookingWizard({ services }: { services: Service[] }) {
   const router = useRouter();
+  const t = useTranslations("book");
   const [step, setStep] = useState<Step>("service");
   const [service, setService] = useState<Service | null>(null);
   const [slot, setSlot] = useState<Slot | null>(null);
@@ -61,16 +63,18 @@ export function BookingWizard({ services }: { services: Service[] }) {
   return (
     <div>
       <ol className="mb-10 flex gap-2 text-xs uppercase tracking-wide text-ink/40">
-        {["Service", "Date & Time", "Your details", "Confirm"].map((label, i) => (
-          <li
-            key={label}
-            className={`flex-1 border-b-2 pb-2 ${
-              i <= currentIndex ? "border-wine text-wine" : "border-ink/10"
-            }`}
-          >
-            {label}
-          </li>
-        ))}
+        {[t("steps.service"), t("steps.datetime"), t("steps.details"), t("steps.confirm")].map(
+          (label, i) => (
+            <li
+              key={label}
+              className={`flex-1 border-b-2 pb-2 ${
+                i <= currentIndex ? "border-wine text-wine" : "border-ink/10"
+              }`}
+            >
+              {label}
+            </li>
+          )
+        )}
       </ol>
 
       {step === "service" && (
@@ -100,7 +104,7 @@ export function BookingWizard({ services }: { services: Service[] }) {
             onClick={() => setStep("details")}
             className="text-sm text-wine hover:underline"
           >
-            Continue with request-based booking →
+            {t("dateTime.continueRequest")}
           </button>
         </div>
       )}

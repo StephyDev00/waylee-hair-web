@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import type { Service } from "@/lib/pricing";
 import { categoryLabels } from "@/data/services-seed";
 
@@ -10,6 +11,7 @@ export function ServiceSelect({
   services: Service[];
   onSelect: (service: Service) => void;
 }) {
+  const t = useTranslations("book.serviceSelect");
   const grouped = services.reduce<Record<string, Service[]>>((acc, s) => {
     (acc[s.category] ??= []).push(s);
     return acc;
@@ -34,7 +36,7 @@ export function ServiceSelect({
                   <span className="text-xs text-ink/45">{s.duration_minutes} min</span>
                 </span>
                 <span className="text-wine text-sm">
-                  {s.flat_price != null ? `CHF ${s.flat_price}.-` : "See pricing"}
+                  {s.flat_price != null ? `CHF ${s.flat_price}.-` : t("seePricing")}
                 </span>
               </button>
             ))}

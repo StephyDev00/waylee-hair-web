@@ -2,36 +2,38 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { ImageOff } from "lucide-react";
 
 export interface PortfolioImage {
   src: string;
   alt: string;
-  category: string;
+  category: "cuts" | "color" | "extensions" | "braids";
 }
 
-const categories = ["All", "Cuts", "Color", "Extensions", "Braids & Weaves"] as const;
+const categoryKeys = ["all", "cuts", "color", "extensions", "braids"] as const;
+type CategoryKey = (typeof categoryKeys)[number];
 
 export function GalleryGrid({ images }: { images: PortfolioImage[] }) {
-  const [active, setActive] = useState<(typeof categories)[number]>("All");
+  const t = useTranslations("portfolio");
+  const [active, setActive] = useState<CategoryKey>("all");
 
-  const filtered =
-    active === "All" ? images : images.filter((img) => img.category === active);
+  const filtered = active === "all" ? images : images.filter((img) => img.category === active);
 
   return (
     <div>
       <div className="flex flex-wrap gap-2">
-        {categories.map((cat) => (
+        {categoryKeys.map((key) => (
           <button
-            key={cat}
-            onClick={() => setActive(cat)}
+            key={key}
+            onClick={() => setActive(key)}
             className={`rounded-full border px-4 py-2 text-sm transition-colors ${
-              active === cat
+              active === key
                 ? "border-wine bg-wine text-ivory"
                 : "border-ink/15 text-ink/70 hover:border-wine hover:text-wine"
             }`}
           >
-            {cat}
+            {t(`categories.${key}`)}
           </button>
         ))}
       </div>
@@ -57,10 +59,11 @@ export function GalleryGrid({ images }: { images: PortfolioImage[] }) {
         <div className="mt-10 flex flex-col items-center justify-center rounded-2xl border border-dashed border-ink/15 py-20 text-center">
           <ImageOff className="text-ink/25" size={32} strokeWidth={1.25} />
           <p className="mt-4 text-ink/60">
-            {active === "All" ? "Portfolio" : active} photos coming soon.
+            {active !== "all" ? `${t(`categories.${active}`)} ` : ""}
+            {t("emptyState")}
           </p>
           <p className="mt-1 text-sm text-ink/40">
-            Follow{" "}
+            {t("followPrefix")}{" "}
             <a
               href="https://www.instagram.com/waylee.hair.beauty"
               target="_blank"
@@ -69,7 +72,7 @@ export function GalleryGrid({ images }: { images: PortfolioImage[] }) {
             >
               @waylee.hair.beauty
             </a>{" "}
-            for the latest work.
+            {t("followSuffix")}
           </p>
         </div>
       )}

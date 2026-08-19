@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import type { Service } from "@/lib/pricing";
 
 function formatChf(value?: number | null) {
@@ -6,6 +7,7 @@ function formatChf(value?: number | null) {
 }
 
 export function PriceTable({ title, services }: { title: string; services: Service[] }) {
+  const t = useTranslations("services.table");
   const hasTiers = services.some((s) => s.price_court != null);
 
   return (
@@ -16,10 +18,10 @@ export function PriceTable({ title, services }: { title: string; services: Servi
           {hasTiers && (
             <thead>
               <tr className="border-b border-ink/15 text-left text-xs uppercase tracking-wide text-ink/50">
-                <th className="py-3 pr-4 font-medium">Service</th>
-                <th className="py-3 px-4 font-medium">Court</th>
-                <th className="py-3 px-4 font-medium">Mi-long</th>
-                <th className="py-3 px-4 font-medium">Long</th>
+                <th className="py-3 pr-4 font-medium">{t("service")}</th>
+                <th className="py-3 px-4 font-medium">{t("court")}</th>
+                <th className="py-3 px-4 font-medium">{t("miLong")}</th>
+                <th className="py-3 px-4 font-medium">{t("long")}</th>
               </tr>
             </thead>
           )}
@@ -29,7 +31,7 @@ export function PriceTable({ title, services }: { title: string; services: Servi
                 <td className="py-4 pr-4 font-medium text-ink">
                   {s.name}
                   <span className="block text-xs font-normal text-ink/45">
-                    {s.duration_minutes} min
+                    {s.duration_minutes} {t("min")}
                   </span>
                 </td>
                 {hasTiers ? (

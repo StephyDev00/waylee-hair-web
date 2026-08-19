@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { DayPicker } from "react-day-picker";
+import { frCH, enGB } from "react-day-picker/locale";
+import { useLocale, useTranslations } from "next-intl";
 import "react-day-picker/style.css";
 import { BookingUnavailableNotice } from "@/components/booking/BookingUnavailableNotice";
 
@@ -19,6 +21,8 @@ export function DateTimeStep({
   onPick: (slot: Slot) => void;
   onFallback: (preferredTimeText: string) => void;
 }) {
+  const t = useTranslations("book.dateTime");
+  const locale = useLocale();
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [slots, setSlots] = useState<Slot[] | null>(null);
   const [connected, setConnected] = useState<boolean | null>(null);
@@ -73,11 +77,12 @@ export function DateTimeStep({
           selected={date}
           onSelect={setDate}
           disabled={{ before: new Date() }}
+          locale={locale === "fr" ? frCH : enGB}
         />
       </div>
 
       {date && loading && (
-        <p className="mt-4 text-sm text-ink/50">Checking availability…</p>
+        <p className="mt-4 text-sm text-ink/50">{t("checking")}</p>
       )}
 
       {date && !loading && connected === false && (
@@ -92,7 +97,7 @@ export function DateTimeStep({
       {date && !loading && connected && slots && (
         <div className="mt-4">
           {slots.length === 0 ? (
-            <p className="text-sm text-ink/50">No open slots that day — try another date.</p>
+            <p className="text-sm text-ink/50">{t("noSlots")}</p>
           ) : (
             <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
               {slots.map((slot) => (

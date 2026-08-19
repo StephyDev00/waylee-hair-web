@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
 import { Music2, MapPin, Phone, Clock } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { InstagramIcon } from "@/components/brand/SocialIcons";
 import { Section, Eyebrow } from "@/components/ui/Section";
 import { MapEmbed } from "@/components/contact/MapEmbed";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { TestimonialsList } from "@/components/contact/TestimonialsList";
-import { BUSINESS_HOURS_DISPLAY } from "@/lib/business-hours";
 import { createClient } from "@/lib/supabase/server";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Visit, call, or message Waylee Hair & Beauty in Geneva.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+  return { title: t("eyebrow"), description: t("title") };
+}
 
 async function getTestimonials() {
   try {
@@ -28,15 +33,20 @@ async function getTestimonials() {
 }
 
 export default async function ContactPage() {
+  const t = await getTranslations("contact");
   const testimonials = await getTestimonials();
+
+  const hours = [
+    { label: t("hoursTuesSat"), value: "10:00 – 18:30" },
+    { label: t("hoursSun"), value: "11:00 – 18:30" },
+    { label: t("hoursMon"), value: t("closed") },
+  ];
 
   return (
     <>
       <Section className="pb-8 pt-16 md:pt-20">
-        <Eyebrow>Contact</Eyebrow>
-        <h1 className="max-w-2xl font-serif text-4xl font-bold md:text-5xl">
-          Come say hello.
-        </h1>
+        <Eyebrow>{t("eyebrow")}</Eyebrow>
+        <h1 className="max-w-2xl font-serif text-4xl font-bold md:text-5xl">{t("title")}</h1>
       </Section>
 
       <Section className="pt-0">
@@ -57,9 +67,9 @@ export default async function ContactPage() {
               <div className="flex items-start gap-3">
                 <Clock size={18} className="mt-0.5 shrink-0 text-wine" />
                 <div>
-                  {BUSINESS_HOURS_DISPLAY.map((h) => (
+                  {hours.map((h) => (
                     <p key={h.label}>
-                      <span className="text-ink/50">{h.label}:</span> {h.hours}
+                      <span className="text-ink/50">{h.label}:</span> {h.value}
                     </p>
                   ))}
                 </div>
@@ -88,7 +98,7 @@ export default async function ContactPage() {
           </div>
 
           <div>
-            <h2 className="font-serif text-2xl font-semibold">Send a message</h2>
+            <h2 className="font-serif text-2xl font-semibold">{t("sendMessage")}</h2>
             <div className="mt-5">
               <ContactForm />
             </div>
@@ -96,7 +106,7 @@ export default async function ContactPage() {
         </div>
 
         <div className="mt-20">
-          <h2 className="font-serif text-2xl font-semibold">What clients say</h2>
+          <h2 className="font-serif text-2xl font-semibold">{t("whatClientsSay")}</h2>
           <div className="mt-6">
             <TestimonialsList testimonials={testimonials} />
           </div>

@@ -1,11 +1,14 @@
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Music2, MapPin, Phone } from "lucide-react";
 import { LineArtMotif } from "@/components/brand/LineArtMotif";
 import { InstagramIcon } from "@/components/brand/SocialIcons";
 import { Container } from "@/components/ui/Container";
 
 export function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="relative overflow-hidden bg-ink text-ivory">
       <LineArtMotif className="pointer-events-none absolute -right-10 -top-10 h-72 w-72 text-ivory/5 md:h-96 md:w-96" />
@@ -25,14 +28,11 @@ export function Footer() {
             <span className="mt-1 block text-[0.65rem] tracking-[0.35em] uppercase text-ivory/60">
               Hair &amp; Beauty
             </span>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory/70">
-              Boutique hair salon in Geneva — extensions, lissage, and precision
-              cuts for a look that&apos;s entirely yours.
-            </p>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory/70">{t("tagline")}</p>
           </div>
 
           <div className="text-sm text-ivory/80">
-            <p className="mb-3 text-xs uppercase tracking-[0.2em] text-ivory/50">Visit</p>
+            <p className="mb-3 text-xs uppercase tracking-[0.2em] text-ivory/50">{t("visit")}</p>
             <p className="flex items-start gap-2">
               <MapPin size={16} className="mt-0.5 shrink-0" />
               Rue Leschot 2, 1205 Genève
@@ -44,13 +44,13 @@ export function Footer() {
               </a>
             </p>
             <div className="mt-4 space-y-1 text-ivory/60">
-              <p>Tue–Sat 10:00–18:30</p>
-              <p>Sun 11:00–18:30 · Mon Closed</p>
+              <p>{t("hoursLine1")}</p>
+              <p>{t("hoursLine2")}</p>
             </div>
           </div>
 
           <div className="text-sm text-ivory/80">
-            <p className="mb-3 text-xs uppercase tracking-[0.2em] text-ivory/50">Follow</p>
+            <p className="mb-3 text-xs uppercase tracking-[0.2em] text-ivory/50">{t("follow")}</p>
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/waylee.hair.beauty"
@@ -75,14 +75,14 @@ export function Footer() {
               href="/book"
               className="mt-6 inline-block text-sm text-wine-light hover:underline"
             >
-              Book an appointment →
+              {t("bookLink")}
             </Link>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-ivory/10 pt-6 text-xs text-ivory/40 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Waylee Hair &amp; Beauty. All rights reserved.</p>
-          <p>Geneva, Switzerland</p>
+          <p>© {new Date().getFullYear()} Waylee Hair &amp; Beauty. {t("rights")}</p>
+          <p>{t("location")}</p>
         </div>
       </Container>
     </footer>

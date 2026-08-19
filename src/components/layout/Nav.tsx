@@ -1,23 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/Button";
-
-const links = [
-  { href: "/services", label: "Services & Pricing" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/about", label: "About" },
-  { href: "/shop", label: "Shop" },
-  { href: "/contact", label: "Contact" },
-];
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("nav");
+
+  const links = [
+    { href: "/services", label: t("services") },
+    { href: "/portfolio", label: t("portfolio") },
+    { href: "/about", label: t("about") },
+    { href: "/shop", label: t("shop") },
+    { href: "/contact", label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-ivory/90 backdrop-blur border-b border-ink/10">
@@ -36,8 +38,9 @@ export function Nav() {
               {link.label}
             </Link>
           ))}
+          <LanguageSwitcher />
           <Button href="/book" className="!px-6 !py-2.5">
-            Book Now
+            {t("bookNow")}
           </Button>
         </nav>
 
@@ -62,8 +65,9 @@ export function Nav() {
               {link.label}
             </Link>
           ))}
+          <LanguageSwitcher className="py-1" />
           <Button href="/book" onClick={() => setOpen(false)} className="mt-2 w-full">
-            Book Now
+            {t("bookNow")}
           </Button>
         </nav>
       )}

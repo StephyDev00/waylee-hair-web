@@ -10,9 +10,3 @@ export const BUSINESS_HOURS: Record<number, { open: string; close: string } | nu
 };
 
 export const SALON_TIMEZONE = "Europe/Zurich";
-
-export const BUSINESS_HOURS_DISPLAY = [
-  { label: "Tuesday – Saturday", hours: "10:00 – 18:30" },
-  { label: "Sunday", hours: "11:00 – 18:30" },
-  { label: "Monday", hours: "Closed" },
-];

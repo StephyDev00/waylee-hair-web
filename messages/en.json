@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "brandName": "Waylee Hair & Beauty",
+    "defaultTitle": "Waylee Hair & Beauty — Salon in Geneva",
+    "description": "Independent hair salon in Geneva specializing in tape-in extensions, tissage, lissage tanin & indien, and precision cuts. Book your appointment online.",
+    "ogDescription": "Independent hair salon in Geneva — extensions, lissage, cuts, and colour."
+  },
+  "nav": {
+    "services": "Services & Pricing",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "shop": "Shop",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "footer": {
+    "tagline": "Boutique hair salon in Geneva — extensions, lissage, and precision cuts for a look that's entirely yours.",
+    "visit": "Visit",
+    "hoursLine1": "Tue–Sat 10:00–18:30",
+    "hoursLine2": "Sun 11:00–18:30 · Mon Closed",
+    "follow": "Follow",
+    "bookLink": "Book an appointment →",
+    "rights": "All rights reserved.",
+    "location": "Geneva, Switzerland"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Geneva · Independent Salon",
+      "titleLine1": "Hair, crafted with",
+      "titleLine2": "precision & care.",
+      "subtitle": "Extensions, lissage, and cuts tailored to you — from a boutique salon in the heart of Geneva.",
+      "bookNow": "Book Now",
+      "viewPortfolio": "View Portfolio"
+    },
+    "servicesPreview": {
+      "eyebrow": "What we do",
+      "title": "Full-service hair, done right.",
+      "cutsTitle": "Cuts & Styling",
+      "cutsDesc": "Precision cuts, brushing, and finishing tailored to your hair type.",
+      "lissageTitle": "Lissage",
+      "lissageDesc": "Tanin & Indien smoothing treatments for lasting shine and softness.",
+      "extensionsTitle": "Extensions",
+      "extensionsDesc": "Tape-in, tissage, and the Métamorphose — Waylee Collection.",
+      "seeAll": "See full services & pricing →"
+    },
+    "portfolioHighlights": {
+      "eyebrow": "The work",
+      "title": "A glimpse of the studio.",
+      "viewFull": "View full portfolio",
+      "comingSoon": "Full styling & result photography coming soon — follow",
+      "comingSoonSuffix": "for the latest work."
+    },
+    "testimonial": {
+      "quote": "Métamorphose.",
+      "body": "Client reviews are on their way — in the meantime, see the real work and real reactions on our",
+      "instagram": "Instagram"
+    }
+  },
+  "services": {
+    "eyebrow": "Services & Pricing",
+    "title": "Transparent pricing, tailored to your hair.",
+    "subtitle": "Pricing varies by hair length (Court / Mi-long / Long). All prices in Swiss Francs (CHF). Ask in salon about lash, brow, and lip services.",
+    "bookCta": "Book your appointment",
+    "table": {
+      "service": "Service",
+      "court": "Court",
+      "miLong": "Mi-long",
+      "long": "Long",
+      "min": "min"
+    },
+    "extensionGrid": {
+      "subtitle": "Waylee Collection — Tape In",
+      "length": "Length",
+      "note": "Textures available: Bodywaves, KinkyStraight, Deepwaves, and more. Price per package, in Swiss Francs."
+    }
+  },
+  "about": {
+    "eyebrow": "About Waylee",
+    "title": "A personal craft, not a franchise.",
+    "paragraph1": "Waylee Hair & Beauty is an independent hair studio in Geneva built around one philosophy: hair should be treated as craftsmanship, not a production line. Every appointment — from a precision cut to a full lissage or tape-in transformation — is approached with the same care and attention to detail.",
+    "paragraph2": "The studio specializes in extensions (tape-in and tissage), smoothing treatments (lissage tanin and indien), and the Métamorphose — Waylee Collection, a curated range of tape-in textures and lengths for a completely custom result.",
+    "placeholder": "Full biography, training & certifications to be added by the salon owner.",
+    "bookCta": "Book an appointment"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Browse by what you want done.",
+    "subtitle": "Every category from cuts to extensions — filter to find your look.",
+    "previewNote": "Preview quality from our Instagram — full-resolution photos coming soon.",
+    "categories": {
+      "all": "All",
+      "cuts": "Cuts",
+      "color": "Color",
+      "extensions": "Extensions",
+      "braids": "Braids & Weaves"
+    },
+    "emptyState": "photos coming soon.",
+    "followPrefix": "Follow",
+    "followSuffix": "for the latest work."
+  },
+  "shop": {
+    "title": "Shop — Coming Soon",
+    "description": "Curated hair care and retail products are on the way. In the meantime, book an appointment to hear our recommendations in person.",
+    "bookNow": "Book Now"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Come say hello.",
+    "hoursTuesSat": "Tuesday – Saturday",
+    "hoursSun": "Sunday",
+    "hoursMon": "Monday",
+    "closed": "Closed",
+    "sendMessage": "Send a message",
+    "whatClientsSay": "What clients say",
+    "reviewsComingSoon": "Reviews coming soon.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "message": "Message",
+      "send": "Send message",
+      "sending": "Sending…",
+      "successTitle": "Message sent — merci!",
+      "successBody": "We'll get back to you as soon as possible.",
+      "error": "Something went wrong — please try again or call us directly.",
+      "nameError": "Please enter your name",
+      "emailError": "Please enter a valid email",
+      "messageError": "Message must be at least 10 characters"
+    }
+  },
+  "book": {
+    "eyebrow": "Book Now",
+    "title": "Reserve your appointment.",
+    "steps": {
+      "service": "Service",
+      "datetime": "Date & Time",
+      "details": "Your details",
+      "confirm": "Confirm"
+    },
+    "serviceSelect": {
+      "seePricing": "See pricing"
+    },
+    "dateTime": {
+      "checking": "Checking availability…",
+      "noSlots": "No open slots that day — try another date.",
+      "unavailableTitle": "Online availability isn't live yet",
+      "unavailableBody": "We're still setting up live calendar booking. Tell us your preferred day & time below and we'll confirm by phone or email — or call us directly at",
+      "preferredLabel": "Preferred day & time",
+      "preferredPlaceholder": "e.g. Thursday afternoon, or Sat 10 Aug around 2pm",
+      "continueRequest": "Continue with request-based booking →"
+    },
+    "details": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "notes": "Notes (optional)",
+      "continue": "Continue",
+      "nameError": "Please enter your name",
+      "emailError": "Please enter a valid email",
+      "phoneError": "Please enter a phone number"
+    },
+    "summary": {
+      "service": "Service",
+      "when": "When",
+      "details": "Details",
+      "confirm": "Confirm booking",
+      "confirming": "Confirming…",
+      "preferredFallback": "Preferred time to be confirmed"
+    },
+    "success": {
+      "title": "Thank you!",
+      "body": "We've received your booking and sent a confirmation to your email. If we need to confirm anything further, we'll reach out directly.",
+      "backHome": "Back to Home"
+    }
+  }
+}

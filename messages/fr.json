@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "brandName": "Waylee Hair & Beauty",
+    "defaultTitle": "Waylee Hair & Beauty — Salon à Genève",
+    "description": "Salon de coiffure indépendant à Genève, spécialisé en extensions tape-in, tissage, lissage tanin & indien et coupes de précision. Réservez votre rendez-vous en ligne.",
+    "ogDescription": "Salon de coiffure indépendant à Genève — extensions, lissage, coupes et couleur."
+  },
+  "nav": {
+    "services": "Prestations & Tarifs",
+    "portfolio": "Portfolio",
+    "about": "À propos",
+    "shop": "Boutique",
+    "contact": "Contact",
+    "bookNow": "Réserver"
+  },
+  "footer": {
+    "tagline": "Salon de coiffure de charme à Genève — extensions, lissage et coupes de précision pour un style entièrement à votre image.",
+    "visit": "Nous rendre visite",
+    "hoursLine1": "Mar–Sam 10h00–18h30",
+    "hoursLine2": "Dim 11h00–18h30 · Lun fermé",
+    "follow": "Nous suivre",
+    "bookLink": "Prendre rendez-vous →",
+    "rights": "Tous droits réservés.",
+    "location": "Genève, Suisse"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Genève · Salon indépendant",
+      "titleLine1": "Une coiffure pensée avec",
+      "titleLine2": "précision & soin.",
+      "subtitle": "Extensions, lissage et coupes sur-mesure — dans un salon de charme au cœur de Genève.",
+      "bookNow": "Réserver",
+      "viewPortfolio": "Voir le portfolio"
+    },
+    "servicesPreview": {
+      "eyebrow": "Nos prestations",
+      "title": "Un service complet, fait avec soin.",
+      "cutsTitle": "Coupes & Coiffage",
+      "cutsDesc": "Coupes précises, brushing et finitions adaptées à votre type de cheveux.",
+      "lissageTitle": "Lissage",
+      "lissageDesc": "Lissages Tanin & Indien pour une brillance et une douceur durables.",
+      "extensionsTitle": "Extensions",
+      "extensionsDesc": "Tape-in, tissage et la Métamorphose — Waylee Collection.",
+      "seeAll": "Voir tous les tarifs →"
+    },
+    "portfolioHighlights": {
+      "eyebrow": "Nos réalisations",
+      "title": "Un aperçu du studio.",
+      "viewFull": "Voir le portfolio complet",
+      "comingSoon": "Photos de nos réalisations bientôt disponibles — suivez",
+      "comingSoonSuffix": "pour découvrir nos derniers travaux."
+    },
+    "testimonial": {
+      "quote": "Métamorphose.",
+      "body": "Les avis clients arrivent bientôt — en attendant, découvrez nos réalisations et les réactions de nos clientes sur notre",
+      "instagram": "Instagram"
+    }
+  },
+  "services": {
+    "eyebrow": "Prestations & Tarifs",
+    "title": "Des tarifs transparents, adaptés à votre chevelure.",
+    "subtitle": "Les tarifs varient selon la longueur des cheveux (Court / Mi-long / Long). Tous les prix sont en francs suisses (CHF). Renseignez-vous en salon pour les prestations cils, sourcils et lèvres.",
+    "bookCta": "Réserver votre rendez-vous",
+    "table": {
+      "service": "Prestation",
+      "court": "Court",
+      "miLong": "Mi-long",
+      "long": "Long",
+      "min": "min"
+    },
+    "extensionGrid": {
+      "subtitle": "Waylee Collection — Tape In",
+      "length": "Longueur",
+      "note": "Textures disponibles : Bodywaves, KinkyStraight, Deepwaves, et plus encore. Prix par lot, en francs suisses."
+    }
+  },
+  "about": {
+    "eyebrow": "À propos de Waylee",
+    "title": "Un savoir-faire personnel, pas une franchise.",
+    "paragraph1": "Waylee Hair & Beauty est un studio de coiffure indépendant à Genève, construit autour d'une philosophie simple : la coiffure doit être traitée comme un artisanat, pas comme une chaîne de production. Chaque rendez-vous — d'une coupe de précision à une transformation complète en lissage ou tape-in — est abordé avec le même soin et la même attention aux détails.",
+    "paragraph2": "Le studio est spécialisé dans les extensions (tape-in et tissage), les soins lissants (lissage tanin et indien), et la Métamorphose — Waylee Collection, une gamme sélectionnée de textures et longueurs tape-in pour un résultat entièrement personnalisé.",
+    "placeholder": "Biographie complète, formations & certifications à venir, ajoutées par la propriétaire du salon.",
+    "bookCta": "Prendre rendez-vous"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Parcourez selon la prestation recherchée.",
+    "subtitle": "Toutes les catégories, des coupes aux extensions — filtrez pour trouver votre style.",
+    "previewNote": "Qualité d'aperçu issue de notre Instagram — photos en haute résolution bientôt disponibles.",
+    "categories": {
+      "all": "Tout",
+      "cuts": "Coupes",
+      "color": "Couleur",
+      "extensions": "Extensions",
+      "braids": "Tresses & Tissages"
+    },
+    "emptyState": "Photos bientôt disponibles.",
+    "followPrefix": "Suivez",
+    "followSuffix": "pour découvrir nos derniers travaux."
+  },
+  "shop": {
+    "title": "Boutique — Bientôt disponible",
+    "description": "Une sélection de produits capillaires et de soins arrive bientôt. En attendant, prenez rendez-vous pour recevoir nos conseils en personne.",
+    "bookNow": "Réserver"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Venez nous rencontrer.",
+    "hoursTuesSat": "Mardi – Samedi",
+    "hoursSun": "Dimanche",
+    "hoursMon": "Lundi",
+    "closed": "Fermé",
+    "sendMessage": "Envoyer un message",
+    "whatClientsSay": "Avis de nos clientes",
+    "reviewsComingSoon": "Avis bientôt disponibles.",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone (facultatif)",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi en cours…",
+      "successTitle": "Message envoyé — merci !",
+      "successBody": "Nous vous répondrons dans les meilleurs délais.",
+      "error": "Une erreur s'est produite — veuillez réessayer ou nous appeler directement.",
+      "nameError": "Veuillez indiquer votre nom",
+      "emailError": "Veuillez indiquer une adresse e-mail valide",
+      "messageError": "Le message doit contenir au moins 10 caractères"
+    }
+  },
+  "book": {
+    "eyebrow": "Réserver",
+    "title": "Réservez votre rendez-vous.",
+    "steps": {
+      "service": "Service",
+      "datetime": "Date & Heure",
+      "details": "Vos coordonnées",
+      "confirm": "Confirmation"
+    },
+    "serviceSelect": {
+      "seePricing": "Voir les tarifs"
+    },
+    "dateTime": {
+      "checking": "Vérification des disponibilités…",
+      "noSlots": "Aucun créneau disponible ce jour — essayez une autre date.",
+      "unavailableTitle": "La réservation en ligne n'est pas encore disponible",
+      "unavailableBody": "Nous finalisons la mise en place de la réservation en ligne. Indiquez-nous votre jour et heure préférés ci-dessous et nous confirmerons par téléphone ou e-mail — ou appelez-nous directement au",
+      "preferredLabel": "Jour & heure préférés",
+      "preferredPlaceholder": "ex. jeudi après-midi, ou sam. 10 août vers 14h",
+      "continueRequest": "Continuer avec une demande de réservation →"
+    },
+    "details": {
+      "name": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "notes": "Notes (facultatif)",
+      "continue": "Continuer",
+      "nameError": "Veuillez indiquer votre nom",
+      "emailError": "Veuillez indiquer une adresse e-mail valide",
+      "phoneError": "Veuillez indiquer un numéro de téléphone"
+    },
+    "summary": {
+      "service": "Service",
+      "when": "Quand",
+      "details": "Coordonnées",
+      "confirm": "Confirmer la réservation",
+      "confirming": "Confirmation…",
+      "preferredFallback": "Heure à confirmer"
+    },
+    "success": {
+      "title": "Merci !",
+      "body": "Nous avons bien reçu votre réservation et vous avons envoyé une confirmation par e-mail. Si nous avons besoin de précisions supplémentaires, nous vous recontacterons directement.",
+      "backHome": "Retour à l'accueil"
+    }
+  }
+}
